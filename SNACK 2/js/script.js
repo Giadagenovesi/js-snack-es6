@@ -32,9 +32,15 @@ const teams = [
     },
 ];
 
-const teamsResult = [];
+//Per ogni oggetto dell'array creo dei valori randomici numerici da inserire al posto dei punti e dei falli
+
 teams.forEach((curTeam) => {
-    curTeam.score = Math.floor(Math.random() * 100);
-    curTeam.fouls = Math.floor(Math.random() * 30);
+    curTeam.score = Math.floor(Math.random() * 100 + 1);
+    curTeam.fouls = Math.floor(Math.random() * 20 + 1);
 });
 console.log(teams);
+
+//Creo un nuovo array utilizzando map, mettendo all'interno solo i nomi delle squadre e i falli subiti
+const teamsResult = teams.map(({ name, fouls }) => ({ name, fouls }));
+console.log(teamsResult);
+ 
