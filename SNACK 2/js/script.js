@@ -3,3 +3,38 @@
 // Generare numeri random al posto degli 0 nelle proprietà:
 // Punti fatti e falli subiti.
 // Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+const teams = [
+    {
+        name: "Leoni",
+        score: "0",
+        fouls: "0",
+    },
+    {
+        name: "Paperi",
+        score: "0",
+        fouls: "0",
+    },
+    {
+        name: "Lupi",
+        score: "0",
+        fouls: "0",
+    },
+    {
+        name: "Gattini",
+        score: "0",
+        fouls: "0",
+    },
+    {
+        name: "Gazzelle",
+        score: "0",
+        fouls: "0",
+    },
+];
+
+const teamsResult = [];
+teams.forEach((curTeam) => {
+    curTeam.score = Math.floor(Math.random() * 100);
+    curTeam.fouls = Math.floor(Math.random() * 30);
+});
+console.log(teams);
